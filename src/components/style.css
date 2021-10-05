@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+nav {
+  background-color: rgb(59, 59, 59);
+  text-align: right;
+  border-radius: 4px;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  margin: 15px 20px;
+  font-family: sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.block {
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(53, 53, 53);
+}
+.menu {
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+.menu,
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+.lower {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+.upper .menu {
+  width: 400px;
+  height: 260px;
+  margin: 20px 0px;
+}
+.lower .menu {
+  width: 490px;
+  height: 310px;
+  margin: 20px 0px;
+}
+.blocker {
+  width: 95%;
+  height: 90%;
+  overflow: hidden;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+.image:hover {
+  transform: scale(1.13);
+  overflow: hidden;
+  transition: 1s;
+}
+.name {
+  width: 40%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+}
+.name p {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  font-family: sans-serif;
+}
+.lower .name p {
+  font-size: 25px;
+}
+.products {
+  position: relative;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  row-gap: 40px;
+}
+@media screen and (max-width: 1150px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 840px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.products h1 {
+  text-align: center;
+  width: 600px;
+  border-bottom: 2px solid grey;
+  margin: 20px 0 10px 0;
+  grid-column: 1/-1;
+}
+.cards {
+  width: 260px;
+  height: 350px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to top, rgb(238, 238, 238), rgb(255, 254, 254));
+  transition: 1s;
+}
+.cards:hover {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 1s;
+}
+.cards img {
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  transition: 1s;
+}
+.cards img:hover {
+  transform: scale(1.02);
+  transition: 1s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+.cards .price {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.cards :last-child {
+  display: inline-block;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+}
